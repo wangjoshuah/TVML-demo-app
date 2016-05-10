@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D0E15061CE2A812009C1D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E15051CE2A812009C1D76 /* AppDelegate.swift */; };
+		2D0E150D1CE2A812009C1D76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0E150B1CE2A812009C1D76 /* Main.storyboard */; };
 		2D0E150F1CE2A812009C1D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0E150E1CE2A812009C1D76 /* Assets.xcassets */; };
 		2D0E151A1CE2A812009C1D76 /* TVML_demo_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E15191CE2A812009C1D76 /* TVML_demo_appTests.swift */; };
 		2D0E15251CE2A812009C1D76 /* TVML_demo_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E15241CE2A812009C1D76 /* TVML_demo_appUITests.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		2D0E15021CE2A812009C1D76 /* TVML-demo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVML-demo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0E15051CE2A812009C1D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D0E150C1CE2A812009C1D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D0E150E1CE2A812009C1D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0E15101CE2A812009C1D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0E15151CE2A812009C1D76 /* TVML-demo-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TVML-demo-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0E15051CE2A812009C1D76 /* AppDelegate.swift */,
+				2D0E150B1CE2A812009C1D76 /* Main.storyboard */,
 				2D0E150E1CE2A812009C1D76 /* Assets.xcassets */,
 				2D0E15101CE2A812009C1D76 /* Info.plist */,
 			);
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0E150F1CE2A812009C1D76 /* Assets.xcassets in Resources */,
+				2D0E150D1CE2A812009C1D76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +283,17 @@
 			targetProxy = 2D0E15211CE2A812009C1D76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D0E150B1CE2A812009C1D76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D0E150C1CE2A812009C1D76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2D0E15271CE2A812009C1D76 /* Debug */ = {
@@ -453,6 +468,7 @@
 				2D0E152B1CE2A812009C1D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D0E152C1CE2A812009C1D76 /* Build configuration list for PBXNativeTarget "TVML-demo-appTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +477,7 @@
 				2D0E152E1CE2A812009C1D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D0E152F1CE2A812009C1D76 /* Build configuration list for PBXNativeTarget "TVML-demo-appUITests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +486,7 @@
 				2D0E15311CE2A812009C1D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
