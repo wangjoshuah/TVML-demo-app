@@ -14,6 +14,8 @@ App.onLaunch = function(options) {
       resourceLoader = new ResourceLoader(options.BASEURL);
       resourceLoader.loadResource(`${options.BASEURL}templates/RWDevConTemplate.xml.js`, function(resource) {
         var doc = Presenter.makeDocument(resource);
+        // add event listener from the load function in presenter
+        doc.addEventListener("select", Presenter.load.bind(Presenter)); 
         // use Presenter to present it on screen
         Presenter.pushDocument(doc);
       })
