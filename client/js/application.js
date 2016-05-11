@@ -1,13 +1,22 @@
+// declare resourceLoader variable
+var resourceLoader;
+
 App.onLaunch = function(options) {
   // create an array of JavaScript files to parse
   var javascriptFiles = [
+    `${options.BASEURL}js/ResourceLoader.js`,
     `${options.BASEURL}js/Presenter.js`
   ];
   // evaluateScripts will load the JavaScript files
   evaluateScripts(javascriptFiles, function(success) {
     if(success) {
-      var alert = createAlert("Hello World!", "Description");
-      Presenter.modalDialogPresenter(alert);
+      // use resourceLoader to load TVML template
+      resourceLoader = new ResourceLoader(options.BASEURL);
+      resourceLoader.loadResource(`${options.BASEURL}templates/RWDevConTemplate.xml.js`, function(resource) {
+        var doc = Presenter.makeDocument(resource);
+        // use Presenter to present it on screen
+        Presenter.pushDocument(doc);
+      })
     } else {
       // Handle the error inside else statement of evaluateScripts.
       var errorDoc = createAlert("Evaluate Scripts Error", "Error attempting to evaluate external JavaScript files.");
