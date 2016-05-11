@@ -11,9 +11,12 @@ var createAlert = function(title, description) {
       <alertTemplate>
         <title>${title}</title>
         <description>${description}</description>
+        <button>
+          <text>OK</text>
+        </button>
       </alertTemplate>
     </document>`
-    var parser = new DOMParser();
-    var alertDoc = parser.parseFromString(alertString, "application/xml");
-    return alertDoc
+  var parser = new DOMParser();
+  var alertDoc = parser.parseFromString(alertString, "application/xml");
+  return alertDoc
 }

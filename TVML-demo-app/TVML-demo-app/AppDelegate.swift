@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        // 1 initialize TVApplication Controller
+        // 1 initialize TVApplication Controller Context
+        // This will contain information on how to start the app and where to look for the Base URL
         let appControllerContext = TVApplicationControllerContext()
         
         // 2 add information to TVApplication controller context about server
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL
         
         // 3 start the TVApplication Controller with context
+        // this manages the JavaScript code
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
         return true
     }
