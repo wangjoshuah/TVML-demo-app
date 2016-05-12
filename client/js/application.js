@@ -2,6 +2,9 @@
 var resourceLoader;
 
 App.onLaunch = function(options) {
+  var counter = JavaScriptCounter.makeCounter();
+  counter.countOutLoud();
+  counter.countOutLoud();
   // create an array of JavaScript files to parse
   var javascriptFiles = [
     `${options.BASEURL}js/ResourceLoader.js`,
@@ -15,7 +18,7 @@ App.onLaunch = function(options) {
       resourceLoader.loadResource(`${options.BASEURL}templates/RWDevConTemplate.xml.js`, function(resource) {
         var doc = Presenter.makeDocument(resource);
         // add event listener from the load function in presenter
-        doc.addEventListener("select", Presenter.load.bind(Presenter)); 
+        doc.addEventListener("select", Presenter.load.bind(Presenter));
         // use Presenter to present it on screen
         Presenter.pushDocument(doc);
       })
